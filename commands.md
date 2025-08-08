@@ -7,17 +7,17 @@
 #### Keyboard
 rpi has default UK keyboard, so change it by running the following commands and options:
 `sudo dpkg-reconfigure locales`
--> select en-US blah blah, then default, then reboot.
+- select en-US blah blah, then default, then reboot.
 `sudo dpkg-reconfigure keyboard-configuration`
--> select `Generic 105-key PC`
--> select `Other`
--> select `English (US)`
--> select `English (US)`
--> reboot
+- select `Generic 105-key PC`
+- select `Other`
+- select `English (US)`
+- select `English (US)`
+- reboot
 
 #### Wifi
 `sudo raspi-config`
--> `System Options>Wireless LAN`
+- select `System Options>Wireless LAN`
 - SSID = network name
 
 #### Packages
@@ -38,7 +38,7 @@ sudo systemctl restart ssh
 sudo systemctl enable ssh
 ```
 `ifconfig`
--> note what the ip address is, and try to ssh into the pi using <userid> and the password.
+- note what the ip address is, and try to ssh into the pi using <userid> and the password.
 
 ```
 ssh-keygen -f ~/.ssh/id_rsa -t rsa -b 4096
@@ -55,5 +55,5 @@ EOF
 
 
 #### Reference
-`sudo netstat -tupan` 		shows active ports
-`[CTRL]-V`                  tells the > shell to take all inputs literally (can use tabs)
+`sudo netstat -tupan` 		shows active ports  
+`[CTRL]-V`                  tells the > shell to take all inputs literally (can use tabs)  
