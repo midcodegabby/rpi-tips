@@ -54,4 +54,4 @@ Host <servername>
 
 
 #### Reference
-sudo netstat -tupan 		shows active ports
+`sudo netstat -tupan` 		shows active ports
