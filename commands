@@ -35,6 +35,7 @@ sudo passwd <userid>
 sudo mkdir /home/<userid>/.ssh
 sudo chown <userid>:<userid> /home/<userid>/.ssh
 sudo systemctl restart ssh
+sudo systemctl enable ssh
 ```
 `ifconfig`
 -> note what the ip address is, and try to ssh into the pi using <userid> and the password.
@@ -42,6 +43,12 @@ sudo systemctl restart ssh
 ```
 ssh-keygen -f ~/.ssh/id_rsa -t rsa -b 4096
 scp -P <port> ~/.ssh/id_rsa.pub <userid>@<ipaddr>:~/.ssh/authorized_keys
+cat > ~/.ssh/config << EOF
+Host <servername>
+	Hostname <sipaddr>
+	User <userid>
+	Port <x>
+	IdentityFile ~/.ssh/id_rsa
 ```
 
 
