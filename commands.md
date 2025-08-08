@@ -49,9 +49,11 @@ Host <servername>
 	User <userid>
 	Port <x>
 	IdentityFile ~/.ssh/id_rsa
+EOF
 ```
 
 
 
 #### Reference
 `sudo netstat -tupan` 		shows active ports
+`[CTRL]-V`                  tells the > shell to take all inputs literally (can use tabs)
